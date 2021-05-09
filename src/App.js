@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MenuBar from "./components/MenuBar";
+import Page from "./components/cv/Page";
 
-function App() {
+import "./columns.less";
+
+const Workspace = (props) => {
+  return <div className="workspace">{props.children}</div>;
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <MenuBar />
+      <Workspace>
+        <Page />
+      </Workspace>
     </div>
   );
-}
+};
 
 export default App;

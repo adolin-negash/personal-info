@@ -1,0 +1,47 @@
+@import "../../common.less";
+
+@font-color: @color-dark-text;
+
+.main-line {
+  width: 70%;
+  height: 800px;
+  overflow: hidden;
+
+  .upper-color-line {
+    background-color: @color-upper;
+    color: @font-color;
+
+    height: 230px;
+    width: 100%;
+
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    overflow: hidden;
+
+    .main-name {
+      height: 40px;
+      font-size: 28px;
+      margin: 0px;
+    }
+
+    .contacts {
+      margin-bottom: 8px;
+
+      span {
+        margin-right: 30px;
+        white-space: nowrap;
+
+        a {
+          color: @font-color;
+          text-decoration: none;
+          
+          span {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

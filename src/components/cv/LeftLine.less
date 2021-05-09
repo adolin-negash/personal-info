@@ -1,0 +1,40 @@
+@import "../../common.less";
+
+.left-line {
+  width: 30%;
+  min-width: 250px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-flow: column;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      border: 1px solid black;
+    }
+
+    .upper-line-intersect {
+      width: 30px;
+      height: 100%;
+      background-color: @color-upper;
+    }
+  }
+
+  .left-color-line {
+    width: 100%;
+    flex-grow: 1;
+    min-height: inherit;
+    height: max-content;
+    background-color: @color-left;
+  }
+}
