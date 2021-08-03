@@ -1,17 +1,14 @@
-import "./MainLine.less";
-import info from "../../info";
-import { FiMail, FiPhone } from "react-icons/fi";
-import { BiMapPin } from "react-icons/bi";
-import { SiLinkedin, SiGithub } from "react-icons/si";
+import "../style/MainLine.less";
+import info from "../info";
 import { Fragment } from "react";
+import Icon from "../common/Icon";
 
 const contacts = info.contacts;
 
 const Contact = (props) => (
   <span>
-    <a href={props.href} target="_blank">
-      {props.icon}
-      &nbsp;&nbsp;
+    <a href={props.href} target="_blank" rel="noreferrer">
+      <Icon code={props.icon} />
       <span>{props.name}</span>
     </a>
   </span>
@@ -20,22 +17,20 @@ const Contact = (props) => (
 const Contacts = () => (
   <Fragment>
     <div className="contacts">
-      <span>
-        <FiPhone /> {contacts.phone}
-      </span>
-      <span>
-        <FiMail /> {contacts.email}
-      </span>
+      <Icon code="phone" />
+      {contacts.phone}
+      <Icon code="email" />
+      {contacts.email}
     </div>
 
     <div className="contacts">
       <Contact
-        icon={<SiGithub />}
+        icon="github"
         href={contacts.github.href}
         name={contacts.github.name}
       />
       <Contact
-        icon={<SiLinkedin />}
+        icon="linkedin"
         href={contacts.linkedin.href}
         name={contacts.linkedin.name}
       />
@@ -43,7 +38,7 @@ const Contacts = () => (
 
     <div className="contacts">
       <Contact
-        icon={<BiMapPin />}
+        icon="map"
         href={contacts.location.href}
         name={contacts.location.name}
       />

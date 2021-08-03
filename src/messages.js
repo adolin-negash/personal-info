@@ -3,6 +3,4 @@ const data = {
   "age": "Возраст:"
 };
 
-export default {
-  ...data,
-};
+export default data;

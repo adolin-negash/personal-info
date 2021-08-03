@@ -1,0 +1,57 @@
+@import "../common.less";
+
+.main-menu {
+  width: 100%;
+
+  background-color: @color-menubar;
+  overflow: hidden;
+  padding-top: 9px;
+
+  .logo-name {
+    float: left;
+    font-weight: normal;
+    color: @color-logo;
+    text-decoration: none;
+  }  
+
+  .github-link {
+    float: right;
+
+    .logo {
+      fill: @color-gray;
+    }
+  }
+}
+
+.mobile {
+  height: 100px;
+  padding-top: 30px;
+
+  .logo-name {
+    margin-left: 30px;
+    font-size: 52px;
+  }
+
+  .github-link {
+    width: 48px;
+    height: 48px;
+    float: right;
+    margin-right: 40px;
+  }
+}
+
+.desktop {
+  height: 30px;
+
+  .logo-name {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
+  .github-link {
+    width: 24px;
+    height: 24px;
+    float: right;
+    margin-right: 10px;
+  }  
+}

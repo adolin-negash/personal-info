@@ -1,4 +1,4 @@
-import "./Page.less";
+import "../style/Page.less";
 import LeftLine from "./LeftLine";
 import MainLine from "./MainLine";
 
